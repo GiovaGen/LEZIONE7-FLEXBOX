@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barra di secondo livello</title>
+    <style>
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul.navbar-flexbox {
+        display: flex;
+        border: 1px solid orangered;
+      }
+
+      ul li {
+        text-align: center;
+      }
+
+      ul.navbar-flexbox > li {
+        position: relative;
+        background-color: orange;
+
+        border-right: 1px solid white;
+        /* flex-grow: 1;
+        flex-basis: 0; */
+        flex: 1 1 0%;
+      }
+
+      ul.navbar-flexbox > li:last-of-type {
+        border-right: 0;
+      }
+
+      ul li:nth-of-type(1) {
+        /* flex-grow: 1; */
+      }
+      ul li a {
+        display: block;
+        padding: 1em 0.2em;
+        color: white;
+        text-decoration: none;
+      }
+
+      ul li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      ul.navbar-flexbox > li:hover ul {
+        max-height: 1000px;
+        transition: 1s;
+      }
+
+      ul li ul li {
+        background-color: red;
+        border-bottom: 1px solid white;
+      }
+
+      ul li ul li:last-of-type {
+        border-bottom: 0;
+      }
+
+      @media all and (max-width: 768px) {
+        ul.navbar-flexbox {
+          flex-direction: column;
+        }
+
+        ul.navbar-flexbox > li {
+          border-right: 0;
+          border-bottom: 1px solid white;
+        }
+
+        ul.navbar-flexbox > li:last-of-type {
+          border-bottom: 0;
+        }
+
+        ul li ul {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="navbar-flexbox">
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Corsi</a>
+          <ul>
+            <li><a href="#">A</a></li>
+            <li><a href="#">A</a></li>
+            <li><a href="#">A</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contatti</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Personale lavoro</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

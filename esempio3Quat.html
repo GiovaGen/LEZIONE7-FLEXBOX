@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+
+    <html>
+      <head>
+        <title>
+          Flexbox -
+          http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+        </title>
+
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+
+          .flex-container {
+            max-width: 1322px;
+            margin: 0 auto;
+            border: 1px solid #000;
+
+            display: flex; /* inline-flex */
+            height: 300px;
+            align-items: flex-start;
+          }
+
+          .flex-item {
+            background: orange;
+            padding: 5px;
+            height: 150px;
+
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+            border-right: 1px solid red;
+          }
+
+          .flex-item:nth-of-type(1) {
+            margin-right: auto;
+          }
+
+          .flex-item:nth-of-type(3) {
+            align-self: flex-end;
+          }
+        </style>
+      </head>
+
+      <body>
+        <div class="flex-container">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>Flexbox</title>
+		
+		<style>
+		*{ box-sizing:border-box}
+		
+		body{max-width:1200px; margin:0 auto; padding: 0 1em;}
+		
+		header,footer{ height:50px; background:#ccc; margin:1em 0;}
+		
+		.flex-container {
+			  padding: 0;
+			  margin: 0;
+			  list-style: none;
+
+			  display: flex;
+			  flex-flow: row nowrap;
+			  justify-content: center;
+		}
+
+		.flex-container2 {
+			  padding: 0;
+			  margin: 0;
+			  list-style: none;
+
+			  display: flex;
+			  flex-flow: column nowrap;
+			  justify-content: center;
+		}
+
+		.flex-item {
+			  background: orange;
+			  width: 20%;
+			  height: 50px;
+			  line-height: 50px;
+			  margin: 0 0 5px;
+			  text-align: center; 
+			  border-right:1px solid #fff;
+		}
+
+        .flex-item2 {
+			  background: green;
+			  width: 20%;
+			  height: 50px;
+			  line-height: 50px;
+			  margin: 0 0 5px;
+			  text-align: center;
+		}
+
+		.flex-item a,.flex-item2 a{
+				display:block;
+				text-decoration:none;
+				color: white;
+				font-weight: bold;
+				font-size: 1em;
+				}
+		
+		@media screen and (max-width:600px)
+		{
+		/*.flex-container {
+			flex-direction: column
+			}
+        */
+        .flex-container {
+			  flex-flow: wrap;
+			}
+
+		.flex-item {
+			width: 100%;
+			margin: 0;
+            border-bottom:1px solid #fff;
+			}
+		}
+		</style>
+	</head>
+	
+	<body>
+		<header></header>
+
+		<ul class="flex-container">
+		  <li class="flex-item"><a href="#">Home</a></li>
+		  <li class="flex-item"><a href="#">About us</a></li>
+		  <li class="flex-item"><a href="#">Products</a></li>
+		  <li class="flex-item"><a href="#">Services</a></li>
+		  <li class="flex-item"><a href="#">Contacts</a></li>
+		</ul>
+        
+        <hr>
+
+        <ul class="flex-container2">
+		  <li class="flex-item2"><a href="#">Home</a></li>
+		  <li class="flex-item2"><a href="#">About us</a></li>
+		  <li class="flex-item2"><a href="#">Products</a></li>
+		  <li class="flex-item2"><a href="#">Services</a></li>
+		  <li class="flex-item2"><a href="#">Contacts</a></li>
+		</ul>
+		
+		<footer></footer>
+
+	</body>
+</html>

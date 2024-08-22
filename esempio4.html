@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .flex-container {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+
+        max-width: 1320px;
+
+        display: flex; /* inline-flex */
+        /* justify-content: center; */
+      }
+
+      .flex-item {
+        background: orange;
+        flex: 1 1 0%;
+        /* flex-basis: 0; */
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        text-align: center;
+        border-right: 1px solid #fff;
+      }
+
+      .flex-item a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+      }
+
+      @media screen and (max-width: 768px) {
+        .flex-container {
+          flex-direction: column;
+        }
+        /* .flex-item {
+          flex-basis: 100%;
+        } */
+
+        .flex-item {
+          /* flex-shrink: 0; */
+          margin: 0;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="flex-container">
+      <li class="flex-item"><a href="#">Home</a></li>
+      <li class="flex-item"><a href="#">About us</a></li>
+      <li class="flex-item"><a href="#">Products</a></li>
+      <li class="flex-item"><a href="#">Services</a></li>
+      <li class="flex-item"><a href="#">Contacts</a></li>
+      <li class="flex-item"><a href="#">Social</a></li>
+    </ul>
+  </body>
+</html>
